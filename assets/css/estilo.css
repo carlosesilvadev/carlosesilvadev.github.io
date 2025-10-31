@@ -23,14 +23,14 @@ background-color: #fff;
 display: flex;
 justify-content: center;
 box-shadow: 0 0 5px;
-height: 80px;
+height: auto;
 }
 
 header h1{
 margin: 20px;
 display: flex;
 align-items: center;
-width: 100%;
+width: 350px;
 }
 
 header h1 i{
@@ -44,8 +44,37 @@ display: inline-block;
 text-align: center;
 }
 
+header h1 span{
+display: inline-block;
+}
+
+header nav{
+height: 100%;
+width: 100%;
+text-align: right;
+}
+
+header nav ul li{
+display: inline-block;
+height: 100%;
+}
+
+header nav ul li a{
+display: flex;
+height: 100%;
+align-items: center;
+font-weight: bold;
+padding: 30px 10px;
+text-transform: uppercase;
+justify-content: center;
+}
+
+header nav ul li a:hover{
+background-color: #F6F6FD;
+}
+
 header nav a#menuHamburguer{
-display: block;
+display: none;
 width: 40px;
 height: 40px;
 margin: 20px;
@@ -83,8 +112,34 @@ right: -13px;
 bottom: 0;
 }
 
-header nav ul{
-border: 1px solid;
+@media screen and (max-width: 832px){
+
+header{
+height: 80px;
+overflow: hidden;
+}
+
+header.exibirMenu{
+height: auto;
+}
+
+
+header h1{
+position: absolute;
+left: 0;
+}
+
+header nav{
+margin-top: 80px;
+padding: 0;
+}
+
+header nav a#menuHamburguer{
 display: block;
-width: 100%;
+}
+
+header nav ul li{
+display: block;
+}
+
 }
