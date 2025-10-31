@@ -52,6 +52,7 @@ header nav{
 height: 100%;
 width: 100%;
 text-align: right;
+margin-right: 20px;
 }
 
 header nav ul li{
@@ -93,26 +94,40 @@ margin: 6px 0;
 transition: .4s;
 }
 
-/* HAMBURGUER COM SETA PARA BAIXO*/
-header nav a#menuHamburguer span.exibirSeta:first-child{
-transform: rotate(45deg);
-position: absolute;
-left: -13px;
-bottom: 0;
+html,body,main{
+height: 100%;
 }
 
-header nav a#menuHamburguer span.exibirSeta:nth-child(2){
-display: none;
+main section{
+height: 100%;
+text-align: center;
+padding: 50px 0;
 }
 
-header nav a#menuHamburguer span.exibirSeta:last-child{
-transform: rotate(-45deg);
-position: absolute;
-right: -13px;
-bottom: 0;
+main section h1{
+text-transform: uppercase;
+color: #4C89F8;
 }
 
-@media screen and (max-width: 832px){
+main section h1 i{
+text-transform: lowercase;
+color: #ccc;
+}
+
+main section p{
+color: #000;
+font-weight: bold;
+font-size: 30px;
+}
+
+main section p span#apaixonado{
+color: #4C89F8;
+border-right: 3px solid;
+}
+
+
+
+@media screen and (max-width: 864px){
 
 header{
 height: 80px;
@@ -132,10 +147,30 @@ left: 0;
 header nav{
 margin-top: 80px;
 padding: 0;
+margin-right: 0;
 }
 
 header nav a#menuHamburguer{
 display: block;
+}
+
+/* HAMBURGUER COM SETA PARA BAIXO*/
+header nav a#menuHamburguer span.exibirSeta:first-child{
+transform: rotate(45deg);
+position: absolute;
+left: -13px;
+bottom: 0;
+}
+
+header nav a#menuHamburguer span.exibirSeta:nth-child(2){
+display: none;
+}
+
+header nav a#menuHamburguer span.exibirSeta:last-child{
+transform: rotate(-45deg);
+position: absolute;
+right: -13px;
+bottom: 0;
 }
 
 header nav ul li{
