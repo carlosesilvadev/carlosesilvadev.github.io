@@ -162,6 +162,7 @@ position: absolute;
 display: block;
 margin:  20px auto;
 left: 0;
+overflow: hidden;
 }
 
 main section p#digitando span#apaixonado{
