@@ -30,47 +30,56 @@ function menuClicado(menuHamburguer){
 	
 }
 
-let paixoes = ["desenvolvimento de sites","criação de componentes web","suporte e manutenção de sites","desenvolvimento com bibliotecas e utilitários","desenvolvimento web"], contadorLetra = 0; iPalavra=0;
 
-//Criado uma função des espera que retorna uma Promise com setTimeout para pausar por alguns segundos.
-function esperar(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+async function loopInfinitoControlado() {
+  while (true) {
+    try {
+      // Simula uma operação assíncrona que leva tempo, neste caso 1 segundo.
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+	let paixoes = ["desenvolvimento de sites","criação de componentes web","suporte e manutenção de sites","desenvolvimento com bibliotecas e utilitários","desenvolvimento web"], contadorLetra = 0; iPalavra=0;
 
-//Criado uma função assíncrona para o loop iterar entre as letras das palavras, e sempre que iterar chama a funcao esperar por 50 milisegundos.
-async function digitandoTexto() {
-
-	for(;iPalavra<paixoes.length;){
-    		for(let iLetra = 0; iLetra < paixoes[iPalavra].length; iLetra++){
-		    	await esperar(50);
-			document.querySelector('span#apaixonado').innerHTML += paixoes[iPalavra].charAt(iLetra);
-    		}
-		await esperar(2000);
- 		await removendoLetras();
+	//Criado uma função des espera que retorna uma Promise com setTimeout para pausar por alguns segundos.
+	function esperar(ms) {
+  		return new Promise(resolve => setTimeout(resolve, ms));
 	}
 
-/*
-  for (let i = 0; i < paixoes.length; i++) {
+	//Criado uma função assíncrona para o loop iterar entre as letras das palavras, e sempre que iterar chama a funcao esperar por 50 milisegundos.
+	async function digitandoTexto() {
 
-    	// Pausa a execução do loop por 50 milissegundos
-    	await esperar(50);
+		for(;iPalavra<paixoes.length;){
+    			for(let iLetra = 0; iLetra < paixoes[iPalavra].length; iLetra++){
+		    		await esperar(50);
+				document.querySelector('span#apaixonado').innerHTML += paixoes[iPalavra].charAt(iLetra);
+    			}
+			await esperar(2000);
+ 			await removendoLetras();
+		}
+	
+		iPalavra = 0;
+	}
 
-	document.querySelector('span#apaixonado').innerHTML += paixoes.charAt(i);
+	await digitandoTexto();
+
+	async function removendoLetras() {
+
+  		for (let iRemove = paixoes[iPalavra].length; iRemove >= 0; iRemove--) {
+    			await esperar(50);
+    			document.querySelector('#apaixonado').innerHTML = paixoes[iPalavra].slice(0,iRemove);
+  		}
+	iPalavra++
+	}
+      
+
+    } catch (error) {
+      console.error("Ocorreu um erro:", error);
+      // Opcional: Adicionado um await/setTimeout aqui também para evitar loop rápido em caso de erro repetitivo
+      await new Promise(resolve => setTimeout(resolve, 1000)); 
+    }
+    // O loop continuará após a conclusão da promise
   }
-
-*/
-  removendoLetras();
 }
 
-digitandoTexto();
+// Inicia a função assincrona para dar início a digitação dos textos e apagando também.
+loopInfinitoControlado();
 
-
-async function removendoLetras() {
-  await esperar(2000);
-console.log(paixoes[iPalavra]);
-  for (let iRemove = paixoes[iPalavra].length; iRemove >= 0; iRemove--) {
-    await esperar(50);
-    document.querySelector('#apaixonado').innerHTML = paixoes[iPalavra].slice(0,iRemove);
-  }
-iPalavra++
-}
