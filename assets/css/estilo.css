@@ -166,7 +166,16 @@ left: 0;
 
 main section p#digitando span#apaixonado{
 color: #4C89F8;
-border-right: 3px solid;
+position: relative;
+}
+
+main section p#digitando span#apaixonado:after{
+content:'';
+position: absolute;
+color: #4C89F8;
+border-bottom: 3px solid #4C89F8;
+width: 10px;
+bottom: 5px;
 }
 
 main section article{
