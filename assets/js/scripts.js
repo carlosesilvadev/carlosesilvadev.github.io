@@ -30,37 +30,47 @@ function menuClicado(menuHamburguer){
 	
 }
 
-let paixoes = "desenvolvimento de sites", contadorLetra = 0;
+let paixoes = ["desenvolvimento de sites","criação de componentes web","suporte e manutenção de sites","desenvolvimento com bibliotecas e utilitários","desenvolvimento web"], contadorLetra = 0; iPalavra=0;
 
-
-
-// 1. Criado uma função des espera que retorna uma Promise
+//Criado uma função des espera que retorna uma Promise com setTimeout para pausar por alguns segundos.
 function esperar(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+//Criado uma função assíncrona para o loop iterar entre as letras das palavras, e sempre que iterar chama a funcao esperar por 50 milisegundos.
+async function digitandoTexto() {
 
-// 2. Criafo uma função assíncrona para o loop iterar entre as letras das palavras, e sempre que iterar chama a funcao esperar por 50 milisegundos.
-async function loopComAtraso() {
+	for(;iPalavra<paixoes.length;){
+    		for(let iLetra = 0; iLetra < paixoes[iPalavra].length; iLetra++){
+		    	await esperar(50);
+			document.querySelector('span#apaixonado').innerHTML += paixoes[iPalavra].charAt(iLetra);
+    		}
+		await esperar(2000);
+ 		await removendoLetras();
+	}
+
+/*
   for (let i = 0; i < paixoes.length; i++) {
-    
-    // Pausa a execução do loop por 50 milissegundos
-    await esperar(50);
-    
 
-document.querySelector('span#apaixonado').innerHTML += paixoes.charAt(i);
+    	// Pausa a execução do loop por 50 milissegundos
+    	await esperar(50);
+
+	document.querySelector('span#apaixonado').innerHTML += paixoes.charAt(i);
   }
-  await esperar(2000);
+
+*/
   removendoLetras();
 }
 
-loopComAtraso();
+digitandoTexto();
+
 
 async function removendoLetras() {
-  for (let i = paixoes.length; i >= 0; i--) {
-
+  await esperar(2000);
+console.log(paixoes[iPalavra]);
+  for (let iRemove = paixoes[iPalavra].length; iRemove >= 0; iRemove--) {
     await esperar(50);
-    document.querySelector('#apaixonado').innerHTML = paixoes.slice(0,i);
+    document.querySelector('#apaixonado').innerHTML = paixoes[iPalavra].slice(0,iRemove);
   }
-
+iPalavra++
 }
