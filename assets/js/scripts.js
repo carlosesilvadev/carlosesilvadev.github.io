@@ -32,20 +32,35 @@ function menuClicado(menuHamburguer){
 
 let paixoes = "desenvolvimento de sites", contadorLetra = 0;
 
-window.onload = function digitandoTexto(){
-			document.querySelector('span#apaixonado').innerHTML += paixoes.charAt(contadorLetra);
-			contadorLetra++;
 
-			setTimeout(digitandoTexto,50);
 
-			/*if(contadorLetra >= document.querySelector('span#apaixonado').innerHTML.length){
-				removendoTexto();
-			}
+// 1. Criado uma função des espera que retorna uma Promise
+function esperar(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-			function removendoTexto(){
-				document.querySelector('#apaixonado').innerHTML = paixoes.slice(0,contadorLetra);
-				contadorLetra--;
 
-				setTimeout(removendoTexto,50);
-			}*/
+// 2. Criafo uma função assíncrona para o loop iterar entre as letras das palavras, e sempre que iterar chama a funcao esperar por 50 milisegundos.
+async function loopComAtraso() {
+  for (let i = 0; i < paixoes.length; i++) {
+    
+    // Pausa a execução do loop por 50 milissegundos
+    await esperar(50);
+    
+
+document.querySelector('span#apaixonado').innerHTML += paixoes.charAt(i);
+  }
+  await esperar(2000);
+  removendoLetras();
+}
+
+loopComAtraso();
+
+async function removendoLetras() {
+  for (let i = paixoes.length; i >= 0; i--) {
+
+    await esperar(50);
+    document.querySelector('#apaixonado').innerHTML = paixoes.slice(0,i);
+  }
+
 }
