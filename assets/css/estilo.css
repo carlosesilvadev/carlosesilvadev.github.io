@@ -163,6 +163,7 @@ display: block;
 margin:  20px auto;
 left: 0;
 overflow: hidden;
+padding: 0 10px;
 }
 
 main section p#digitando span#apaixonado{
