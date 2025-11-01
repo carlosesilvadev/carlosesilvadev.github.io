@@ -55,8 +55,6 @@ async function loopInfinitoControlado() {
 			await esperar(2000);
  			await removendoLetras();
 		}
-	
-		iPalavra = 0;
 	}
 
 	await digitandoTexto();

@@ -100,9 +100,12 @@ height: 100%;
 }
 
 main section{
-height: 100%;
+width: 80%;
+height: auto;
 text-align: center;
-padding: 50px 0;
+padding: 50px 0 0;
+margin: auto;
+position: relative;
 }
 
 main section picture{
@@ -143,7 +146,7 @@ transition: .3s;
 main section h1{
 text-transform: uppercase;
 color: #4C89F8;
-margin: 10px 0;
+margin: 10px 0 20px 0;
 }
 
 main section h1 i{
@@ -151,16 +154,39 @@ text-transform: lowercase;
 color: #ccc;
 }
 
-main section p{
+main section p#digitando{
 color: #000;
 font-weight: bold;
 font-size: 30px;
+position: absolute;
+display: block;
+margin:  20px auto;
+left: 0;
 }
 
-main section p span#apaixonado{
+main section p#digitando span#apaixonado{
 color: #4C89F8;
 border-right: 3px solid;
 }
+
+main section article{
+margin: 240px 20px 0;
+}
+
+main section article p{
+color: #000;
+font-weight: normal;
+font-size: 20px;
+text-align: justify;
+margin: 20px 0;
+word-spacing: -2px;
+}
+
+main section article p span{
+font-weight: bold;
+color: #4C89F8;
+}
+
 
 @keyframes bordaCircular{
 
@@ -218,6 +244,10 @@ bottom: 0;
 
 header nav ul li{
 display: block;
+}
+
+main section{
+width: 100%;
 }
 
 }
