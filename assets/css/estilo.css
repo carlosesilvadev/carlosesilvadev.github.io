@@ -240,6 +240,91 @@ font-weight: bold;
 }
 
 
+main section#habilidades ul{
+width: 80%;
+margin: auto;
+}
+
+main section#habilidades ul li{
+border: 1px solid #4C89F8;
+width: 50px;
+height: 50px;
+display: inline-block;
+border-radius: 10px;
+text-align: center;
+overflow: hidden;
+padding: 5px;
+box-shadow: 0 0 3px #4C89F8;
+background-color: #fff;
+margin: 5px;
+}
+
+main section#habilidades ul li i{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 50px;
+}
+
+main section#habilidades ul li i.fa-js{
+color: #EFD81D;
+}
+
+main section#habilidades ul li i.fa-git-alt{
+color: #E84D31;
+}
+
+main section#habilidades ul li i.fa-bootstrap{
+color: #722DF9;
+}
+
+main section#habilidades ul li i.fa-github{
+color: #1A1D22;
+}
+
+main section#habilidades ul li i.fa-database{
+color: #DE3029;
+}
+
+main section#habilidades ul li i.fa-php{
+color: #4F5B93;
+}
+
+main section#habilidades ul li i.fa-python{
+color: #356FA0;
+}
+
+main section#habilidades ul li i.fa-figma{
+color: #0AC87E;
+}
+
+main section#habilidades ul li i.fa-windows{
+color: #0982D9;
+}
+
+main section#habilidades ul li i.fa-node-js{
+color: #417E38;
+}
+
+main section#habilidades ul li i.fa-linux{
+color: #000;
+}
+
+main section#habilidades ul li i.fa-jira{
+color: #1868DB;
+}
+
+main section#habilidades ul li i.fa-aws{
+color: #FF9700;
+}
+
+main section#habilidades ul li i.fa-html5{
+color: #DD4B25;
+}
+
+main section#habilidades ul li i.fa-css3-alt{
+color: #254BDD;
+}
 
 @keyframes bordaCircular{
 
