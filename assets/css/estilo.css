@@ -20,11 +20,15 @@ background-color: #F6F6FD;
 }
 
 header{
+position: fixed;
 background-color: #fff;
 display: flex;
 justify-content: center;
 box-shadow: 0 0 5px;
 height: auto;
+z-index: 3;
+width: 100%;
+top: 0;
 }
 
 header h1{
@@ -103,7 +107,6 @@ text-align: center;
 padding: 50px 0;
 margin: auto;
 position: relative;
-
 }
 
 main section:nth-child(2n){
@@ -115,7 +118,7 @@ main section picture{
 display: block;
 width: 200px;
 height: 200px;
-margin: auto;
+margin: 80px auto 0;
 box-shadow: 0 0 10px;
 border-radius: 50%;
 overflow: hidden;
