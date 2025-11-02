@@ -368,7 +368,8 @@ color: #fff;
 }
 
 main section#servicos ul li p{
-padding: 10px 0;
+padding: 10px 20px;
+text-align: justify;
 }
 
 main section#contatos{
