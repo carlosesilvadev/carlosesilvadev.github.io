@@ -371,6 +371,34 @@ main section#servicos ul li p{
 padding: 10px 0;
 }
 
+main section#contatos{
+padding: 30px 0;
+}
+
+main section#contatos table{
+margin: auto;
+}
+
+main section#contatos table tbody tr th,td{
+padding: 10px 0;
+text-align: left;
+}
+
+main section#contatos table tbody tr th i.fa-envelope{
+color: #194AB9;
+}
+
+main section#contatos table tbody tr th i.fa-github{
+color: #000;
+}
+
+main section#contatos table tbody tr th i.fa-linkedin{
+color: #0A63BC;
+}
+
+main section#contatos table tbody tr th i.fa-whatsapp{
+color: #00D054;
+}
 
 @keyframes bordaCircular{
 
