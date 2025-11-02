@@ -81,4 +81,14 @@ async function loopInfinitoControlado() {
 // Inicia a função assincrona para dar início a digitação dos textos e apagando também.
 loopInfinitoControlado();
 
+
+/*Remover o fundo branco dos campos da lista de habilidades que ainda serão preenchidos*/
+let habilidades = document.querySelectorAll('section#habilidades>ul>li');
+
+for(let i = 0; i < habilidades.length; i++){
+    if(habilidades[i].innerHTML == ''){
+        habilidades[i].style.background = 'none';
+    }
+}
+
 document.querySelector('span#anoAtual').innerHTML = new Date().getFullYear();
