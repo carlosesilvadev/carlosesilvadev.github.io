@@ -14,7 +14,8 @@ outline: none;
 box-sizing: content-box;
 }
 
-body{
+html,body,main,section{
+height: 100%;
 background-color: #F6F6FD;
 }
 
@@ -95,23 +96,19 @@ margin: 6px 0;
 transition: .4s;
 }
 
-html,body,main{
-height: 100%;
-}
-
 main section{
 width: 80%;
 height: auto;
 text-align: center;
-padding: 50px 0 0;
+padding: 50px 0;
 margin: auto;
 position: relative;
+
 }
 
 main section:nth-child(2n){
 background-color: #fff;
 width: 100%;
-padding-bottom: 50px;
 }
 
 main section picture{
@@ -372,7 +369,9 @@ padding: 10px 0;
 }
 
 main section#contatos{
-padding: 30px 0;
+padding: 50px 0 120px;
+position: relative;
+width: 100%;
 }
 
 main section#contatos table{
@@ -398,6 +397,24 @@ color: #0A63BC;
 
 main section#contatos table tbody tr th i.fa-whatsapp{
 color: #00D054;
+}
+
+footer{
+background-color: #4C89F8;
+position: absolute;
+left: 0;
+bottom: -50px;
+width: 100%;
+padding: 20px 0;
+}
+
+footer p{
+color: #fff;
+margin: 20px 0;
+}
+
+footer span{
+color: #fff;
 }
 
 @keyframes bordaCircular{

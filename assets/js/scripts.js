@@ -49,7 +49,7 @@ async function loopInfinitoControlado() {
 
 		for(;iPalavra<paixoes.length;){
     			for(let iLetra = 0; iLetra < paixoes[iPalavra].length; iLetra++){
-		    		await esperar(50);
+		    		await esperar(100);
 				document.querySelector('span#apaixonado').innerHTML += paixoes[iPalavra].charAt(iLetra);
     			}
 			await esperar(2000);
@@ -81,3 +81,4 @@ async function loopInfinitoControlado() {
 // Inicia a função assincrona para dar início a digitação dos textos e apagando também.
 loopInfinitoControlado();
 
+document.querySelector('span#anoAtual').innerHTML = new Date().getFullYear();
