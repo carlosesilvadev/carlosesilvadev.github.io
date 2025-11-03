@@ -91,4 +91,18 @@ for(let i = 0; i < habilidades.length; i++){
     }
 }
 
+//Atualiza o ano em cada novo ano que entra na página, e assim vai dar pra comparar o ano  de lançamento do portifólio que foi em 2025 e o ano atual em que estamos.
 document.querySelector('span#anoAtual').innerHTML = new Date().getFullYear();
+
+/*
+Exibir seta para voltar ao topo somente quando o usuário rolar a página.
+*/
+
+window.addEventListener('scroll', function(){
+
+	let posicaoDaBarraDeRolagem = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
+	if(posicaoDaBarraDeRolagem >= 140){
+		document.getElementById('voltarParaOTopo').style.display = 'flex';
+	}
+});
