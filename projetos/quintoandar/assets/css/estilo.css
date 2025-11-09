@@ -1,0 +1,779 @@
+*{
+margin: 0;
+padding: 0;
+color: #444;
+font-family: 'Century Gothic', sans-serif;
+font-style: normal;
+list-style-type: none;
+text-decoration: none;
+border: none;
+border-collapse: collapse;
+box-sizing: content-box;
+outline: none;
+}
+
+html,body,main{
+height: 100%;
+width: 100%;
+}
+
+div#pequeno{
+display: none;
+position: relative;
+background-color: #fff;
+width: 95%;
+padding: 22px 0;
+z-index:0;
+overflow: hidden;
+}
+
+header{
+display: flex;
+align-items: center;
+padding: 0 50px;
+z-index: 3;
+}
+
+header a.menuHamburguer{
+display: none;
+}
+
+header a.menuHamburguerComX{
+display: none;
+}
+
+header nav{
+background-color: #fff;
+width: 100%;
+text-align: right;
+margin-right: 20px;
+}
+
+header nav ul{
+background-color: #fff;
+}
+
+header nav ul li{
+text-align: left;
+position: relative;
+background-color: #fff;
+}
+
+header nav>ul>li>a{
+display: block;
+padding: 30px 25px;
+transition: .1s;
+font-weight: bold;
+font-size: 15px;
+}
+
+header nav>ul>li>a:hover{
+background-color: #f2f2f2;
+}
+
+header nav ul li div{
+display: none;
+width: 220px;
+position: absolute;
+box-shadow: 0 0 1px;
+padding: 10px 20px;
+border-radius: 2px;
+z-index:3;
+background-color: #fff;
+}
+
+header nav ul li:nth-child(3) div{
+width: 230px;
+}
+
+header nav ul li.submenu:last-child{
+direction: rtl;
+}
+
+header nav ul li div ul li{
+display: block;
+width: 100%;
+}
+
+header nav ul li div ul li a{
+display: block;
+padding: 15px;
+position: relative;
+transition: .1s;
+}
+
+header nav ul li div ul li:hover a{
+background-color: #f2f2f2;
+font-weight: 700;
+}
+
+header nav ul li div ul p{
+font-size: 18px;
+font-weight: bold;
+border-bottom: 1px solid #ccc;
+padding: 10px 0;
+background-color: #fff;
+
+}
+
+header nav ul li > ul{
+position: absolute;
+display: none;
+width: 280px;
+box-shadow: 0 0 1px;
+padding: 10px 20px;
+border-radius: 2px;
+left: 260px;
+height: 350px;
+background-color: #fff;
+z-index: 3;
+}
+
+header nav ul li ul p{
+font-size: 18px;
+font-weight: bold;
+border-bottom: 1px solid #ccc;
+padding: 10px 0;
+background-color: #fff;
+display: block;
+}
+
+header nav ul li ul li a{
+display: block;
+padding: 15px;
+transition: .1s;
+font-size: 15px;
+}
+
+header nav ul li ul li:hover a{
+background-color: #cccccc44;
+font-weight: 700;
+}
+
+header nav ul li.submenu{
+display: inline-block;
+height: 100%;
+position: relative;
+background-color: #fff;
+
+}
+
+header nav ul li.submenu:before{
+position: absolute;
+content:'';
+right: 10px;
+top: 55%;
+transform: translateY(-50%);
+border-right: transparent solid;
+border-left: transparent solid;
+border-bottom: transparent solid;
+border-top: 1px solid;
+border-width: 5px;
+}
+
+header nav ul li.submenu:nth-child(5):before{
+display: none;
+}
+
+header nav ul li:hover div{
+display: block;
+}
+
+header> a{
+position: relative;
+border-radius: 20px;
+width: 100px;
+background-color: #f2f2f2;
+padding: 10px;
+display: block;
+font-weight: bold;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+}
+
+header> a>i{
+border: 1px solid;
+border-radius: 50%;
+overflow: hidden;
+width: 12px;
+height: 12px;
+padding: 1px 0 0 0;
+margin: 0 5px;
+text-align: center;
+font-size: 12px;
+}
+
+header a div{
+display: none;
+position: absolute;
+width: 350px;
+top: 40px;
+right: 0;
+box-shadow: 0 0 1px;
+cursor: default;
+border-radius: 5px;
+background-color: #fff;
+z-index: 3;
+}
+
+header a:hover div{
+display: block;
+}
+
+header a div p{
+color: #888;
+font-size: 11px;
+margin: 10px;
+text-align: center;
+}
+
+header a div button{
+border-radius: 30px;
+width: 325px;
+background-color: #3957BD;
+padding: 15px 0;
+display: block;
+font-weight: bold;
+color: #fff;
+font-size: 15px;
+margin: 15px 15px;
+cursor: pointer;
+}
+
+header a div button:hover{
+background-color: #3552B5;
+}
+
+header a div ul li{
+cursor: pointer;
+font-weight: normal;
+font-size: 15px;
+padding: 15px;
+}
+
+header a div ul li i{
+margin-right: 15px;
+}
+
+header a div ul li:hover{
+background-color: #f2f2f2;
+}
+
+main section{
+margin-bottom: 80px;
+}
+
+main section#imovel{
+width: 100%;
+height: 115%;
+overflow: hidden;
+position: relative;
+}
+
+main section#imovel picture{
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background: url(../img/first-fold-landing-image-search.png) no-repeat;
+background-size: cover;
+}
+
+main section#imovel picture img{
+width: 100%;
+height: 100%;
+}
+
+main section#imovel form{
+background-color: #fff;
+box-shadow: 0 0 2px #fff;
+width: 450px;
+border-radius: 10px;
+overflow: hidden;
+padding: 30px 40px;
+position: absolute;
+margin: 40px 60px;
+}
+
+main section#imovel form h1{
+font-size: 40px;
+}
+
+main section#imovel form h1 i{
+display: block;
+}
+
+main section#imovel form div{
+background-color: #f2f2f2;
+padding: 5px;
+font-weight: bold;
+width: 300px;
+border-radius: 50px;
+text-align: center;
+position: relative;
+}
+
+main section#imovel form div a{
+display: inline-block;
+font-size: 12px;
+background-color: #f2f2f2;
+font-weight: bold;
+width: 147px;
+border-radius: 50px;
+text-align: center;
+transition: .4s;
+}
+
+main section#imovel form div a i{
+position: relative;
+z-index: 2;
+font-size: 12px;
+padding: 10px 0;
+font-weight: bold;
+width: 147px;
+border-radius: 50px;
+text-align: center;
+display: inline-block;
+}
+
+main section#imovel form div a:hover{
+background-color: #ccc;
+}
+
+main section#imovel form div span{
+position: absolute;
+display: none;
+font-size: 12px;
+background-color: #fff;
+padding: 18px 0;
+font-weight: bold;
+width: 147px;
+border-radius: 50px;
+text-align: center;
+transition: .4s;
+z-index: 1;
+transition: .4s all;
+}
+
+main section#imovel form div span.moverParaEsquerda{
+transition: .4s;
+display: inline-block;
+left: 6px;
+}
+
+main section#imovel form div span.moverParaDireita{
+transition: .4s;
+display: inline-block;
+right: 6px;
+}
+
+main section#imovel form label#alugarComprar{
+border: none;
+border-bottom: 1px solid #f2f2f2;
+padding: 0;
+}
+
+main section#imovel form label#alugarComprar a{
+padding: 10px 0;
+margin: 0 15px 0 0;
+display: inline-block;
+font-weight: bold;
+cursor: pointer;
+border-bottom: 2px solid transparent;
+font-size: 18px;
+}
+
+main section#imovel form label#alugarComprar a:hover{
+color: #3957BD;
+border-bottom: 2px solid #3957BD;
+}
+
+main section#imovel form label{
+width: 96%;
+display: block;
+border: 1px solid #f2f2f2;
+padding: 5px;
+margin: 15px 0;
+}
+
+main section#imovel form label#cidades{
+position: relative;
+}
+
+main section#imovel form label ul#suggestions{
+position: absolute;
+box-shadow:0 0 1px;
+width:100%;
+background-color: #F0F0F2;
+}
+
+main section#imovel form label span{
+font-weight: bold;
+}
+
+main section#imovel form label input{
+display: block;
+width: 90%;
+margin: 10px auto;
+font-weight: bold;
+}
+
+main section#imovel form label input::placeholder{
+font-weight: normal;
+}
+
+main section#imovel form label#valor{
+display: inline-block;
+width: 45%;
+margin: 0 2px;
+}
+
+main section#imovel form label select{
+padding: 10px;
+border: none;
+}
+
+main section#imovel form label select option{
+border: none;
+font-weight: bold;
+font-size: 15px;
+}
+
+main section#imovel form label#quartos{
+display: inline-block;
+width: 45%;
+margin: 0;
+}
+
+
+main section#imovel form label select{
+display: block;
+margin: 15px;
+}
+
+main section#imovel form button{
+border-radius: 30px;
+width: 100%;
+background-color: #3552B5;
+padding: 15px 0;
+display: block;
+font-weight: bold;
+color: #fff;
+font-size: 15px;
+margin: 30px 0;
+cursor: pointer;
+}
+
+main section#amyr{
+width: 100%;
+height: 100%;
+background: url(../img/amyr-klink-campaign-background-desktop.jpg) no-repeat center;
+background-size: contain;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+main section#amyr h1{
+font-size: 50px;
+color: #fff;
+display: inline-block;
+width: 40%;
+position: relative;
+top: -120px;
+}
+
+main section#amyr h1 span{
+display: block;
+font-size: 40px;
+color: #fff;
+font-weight: normal;
+}
+
+main section#amyr picture{
+width: 600px;
+height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+main section#amyr picture img{
+width: 100%;
+height: 100%;
+border-radius: 55px;
+}
+
+main section#amyr p{
+position: absolute;
+display: inline-block;
+left: 200px;
+top: 54%;
+font-weight: bold;
+font-size: 25px;
+color: #fff;
+}
+
+main section#amyr p:before{
+position: absolute;
+content: '';
+width: 100px;
+height: 1px;
+background-color: #fff;
+left: -120px;
+margin-top: 20px;
+}
+
+main section#amyr button{
+position: absolute;
+display: inline-block;
+left: 80px;
+top: 60%;
+border-radius: 30px;
+width: 150px;
+background-color: #3552B5;
+padding: 20px 0;
+font-weight: bold;
+color: #fff;
+font-size: 15px;
+margin: 30px 0;
+cursor: pointer;
+}
+
+
+/*ESTILIZAÇÃO PARA DISPOSITIVOS MOVEIS*/
+@media screen and (max-width: 1220px){
+header{
+padding: 20px;
+display: block;
+position: fixed;
+height: 100%;
+width: 280px;
+background-color: #fff;
+overflow-y: scroll;
+margin-left: -320px;
+transition: .3s;
+top: 0;
+}
+
+header.exibirMenu{
+margin-left: 0;
+}
+
+div#pequeno{
+display: block;
+position: relative;
+top: 0;
+}
+
+div#pequeno img{
+margin-left: 60px;
+}
+
+div a.menuHamburguer{
+width: 30px;
+height: 30px;
+display: block;
+border-radius: 0;
+padding: 0;
+position: absolute;
+left: 15px;
+top: 15px;
+background-color: #fff;
+cursor: pointer;
+}
+
+div a.menuHamburguer span{
+display: block;
+width: 100%;
+height: 5px;
+margin: 6px 0;
+background-color: #444;
+transition: .3s;
+}
+
+div a.menuHamburguer span:nth-child(2n){
+width: 70%;
+}
+
+header a.menuHamburguerComX{
+width: 30px;
+height: 30px;
+display: block;
+border-radius: 0;
+padding: 0;
+position: absolute;
+right: 15px;
+top: 15px;
+background-color: #fff;
+cursor: pointer;
+}
+
+header a.menuHamburguerComX span{
+display: block;
+width: 100%;
+height: 5px;
+margin: 6px 0;
+background-color: #444;
+transition: .3s;
+}
+
+header a.menuHamburguerComX span:nth-child(2n){
+width: 70%;
+}
+
+header a.menuHamburguerComX span:nth-child(2n+1){
+position: absolute;
+top: 10px;
+transform:rotate(45deg);
+}
+
+header a.menuHamburguerComX span:nth-child(2n){
+position: absolute;
+top: 20%;
+width: 0%;
+}
+
+header a.menuHamburguerComX span:last-child{
+transform: rotate(-45deg);
+}
+
+header img{
+margin: 15px 0;
+}
+
+header nav{
+display: block;
+position: absolute;
+left: 0;
+height: 100vh;
+width: 100%;
+}
+
+header nav a.menuHamburguer{
+position: absolute;
+}
+
+header nav ul{
+margin-top: 50px;
+}
+
+header nav ul li{
+display: block;
+width: 100%;
+}
+
+header nav ul li.submenu:before{
+right: 15px;
+}
+
+header a#entrar{
+display: block;
+}
+
+header a#entrar div{
+left: 0;
+width: 280px;
+}
+
+header a#entrar div button{
+width: 250px;
+}
+
+header nav ul li{
+padding: 0;
+}
+
+header nav ul li:hover + div{
+display: block;
+}
+
+header nav ul li div{
+display: none;
+width: 100%;
+position: relative;
+border-radius: 2px;
+background-color: #fff;
+height: auto;
+overflow: hidden;
+padding: 0;
+}
+
+header nav ul li > ul#tiposImoveis{
+display: none;
+opacity: 0;
+}
+
+header nav ul li:nth-child(3) div{
+width: 100%;
+}
+
+header nav ul li div p{
+display: none;
+}
+
+header nav ul li div ul{
+margin: 0;
+}
+
+
+main section#imovel{
+width: 100%;
+height: auto;
+padding: 0;
+background-size: contain;
+margin: auto;
+}
+
+main section#imovel picture{
+position: none;
+background-size: contain;
+}
+
+main section#imovel form{
+background-color: #fff;
+box-shadow: 0 0 2px #fff;
+width: auto;
+border-radius: 10px;
+overflow: hidden;
+padding: 15px 30px;
+margin: 250px 0 0;
+position: relative;
+}
+
+main section#amyr{
+height: 1000px;
+background-size: cover;
+overflow: hidden;
+}
+
+main section#amyr h1{
+width: 90%;
+top: -220px;
+padding-bottom: 10px;
+}
+
+main section#amyr h1>span{
+display: inline-block;
+}
+
+main section#amyr picture{
+position: absolute;
+top: 580px;
+overflow: hidden;
+max-width: 90%;
+height: 300px;
+}
+
+main section#amyr picture img{
+padding: 0 20px;
+}
+
+main section#amyr button{
+top: 900px;
+}
+
+}
