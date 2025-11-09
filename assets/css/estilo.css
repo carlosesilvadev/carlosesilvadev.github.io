@@ -189,6 +189,7 @@ margin:  20px auto;
 left: 0;
 overflow: hidden;
 padding: 0 10px;
+width: 100%;
 }
 
 main section p#digitando span#apaixonado{
@@ -205,7 +206,7 @@ bottom: 5px;
 }
 
 main section article{
-margin: 240px 20px 0;
+margin: 250px 20px 0;
 }
 
 main section article p{
@@ -398,7 +399,7 @@ text-align: justify;
 }
 
 main section#contatos{
-padding: 50px 0 120px;
+padding: 50px 0 160px;
 position: relative;
 width: 100%;
 }
@@ -507,6 +508,10 @@ display: block;
 
 main section{
 width: 100%;
+}
+
+main section p#digitando{
+width: 97%;
 }
 
 }
