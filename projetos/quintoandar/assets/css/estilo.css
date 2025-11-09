@@ -277,8 +277,8 @@ height: 100%;
 position: absolute;
 top: 0;
 left: 0;
-background: url(../img/first-fold-landing-image-search.png) no-repeat;
-background-size: cover;
+background: url(../img/first-fold-landing-image-search.png) no-repeat top center;
+background-size: contain;
 }
 
 main section#imovel picture img{
