@@ -19,6 +19,25 @@ height: 100%;
 background-color: #F6F6FD;
 }
 
+body a#voltarParaOTopo{
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 60px;
+height: 60px;
+background-color: #4C89F8;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0 0 10px;
+z-index: 3;
+}
+
+body a#voltarParaOTopo i{
+color: #fff;
+}
+
 header{
 position: fixed;
 background-color: #fffffff3;
@@ -247,6 +266,12 @@ position: relative;
 z-index: 1;
 }
 
+/*Projeto do Quinto Andar*/
+main section#projetos ul li:first-child a{
+background: url(../img/projeto_quintoandar.png) no-repeat center;
+background-size: contain;
+}
+
 
 main section#habilidades ul{
 width: 80%;
@@ -418,25 +443,6 @@ margin: 20px 0;
 }
 
 footer span{
-color: #fff;
-}
-
-body a#voltarParaOTopo{
-position: fixed;
-bottom: 20px;
-right: 20px;
-width: 60px;
-height: 60px;
-background-color: #4C89F8;
-border-radius: 50%;
-display: flex;
-justify-content: center;
-align-items: center;
-box-shadow: 0 0 10px;
-z-index: 3;
-}
-
-body a#voltarParaOTopo i{
 color: #fff;
 }
 
