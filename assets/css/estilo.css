@@ -274,6 +274,12 @@ background-size: contain;
 }
 
 
+/*Projeto do Github*/
+main section#projetos ul li:nth-child(3) a{
+background: url(../img/projeto_github.png) no-repeat;
+background-size: cover;
+}
+
 main section#habilidades ul{
 width: 80%;
 margin: 20px auto;
